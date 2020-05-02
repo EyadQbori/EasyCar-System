@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CarsController">
+  <children>
+    <Label layoutX="49.0" layoutY="20.0" text="Id" />
+    <TextField fx:id="txtId" disable="true" editable="false" layoutX="162.0" layoutY="15.0" prefHeight="31.0" prefWidth="331.0" />
+    <Label layoutX="49.0" layoutY="158.0" text="Plate Number" />
+    <TextField fx:id="txtPlate" layoutX="160.0" layoutY="155.0" prefHeight="25.0" prefWidth="340.0" promptText="Enter Plate Number" />
+    <Label layoutX="49.0" layoutY="206.0" text="vbn" />
+    <TextField fx:id="txtVbn" layoutX="160.0" layoutY="203.0" prefHeight="25.0" prefWidth="340.0" promptText="Enter VBNl" />
+    <Label layoutX="49.0" layoutY="255.0" text="Model" />
+    <TextField fx:id="txtModel" layoutX="160.0" layoutY="252.0" prefHeight="25.0" prefWidth="340.0" promptText="Enter Model" />
+    <Label layoutX="43.0" layoutY="65.0" text="Company" />
+    <Label layoutX="49.0" layoutY="115.0" text="Kind" />
+    <ComboBox fx:id="cmbCompany" layoutX="159.0" layoutY="62.0" prefHeight="32.0" prefWidth="340.0" promptText="Select Company" />
+    <ComboBox fx:id="cmbKind" layoutX="161.0" layoutY="112.0" prefHeight="32.0" prefWidth="340.0" promptText="Select Kind" />
+    <ImageView fx:id="imgPhoto" fitHeight="281.0" fitWidth="294.0" layoutX="937.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow />
+         </effect></ImageView>
+    <Button fx:id="btnSelect" layoutX="937.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleSelect" prefHeight="31.0" prefWidth="285.0" text="Select Image" />
+    <Button fx:id="btnAdd" layoutX="39.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="39.0" prefWidth="92.0" text="Add" />
+    <Button fx:id="btnUpdate" layoutX="159.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="39.0" prefWidth="110.0" text="Update" />
+    <Button fx:id="btnDelete" layoutX="949.0" layoutY="412.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="39.0" prefWidth="110.0" text="Delete" />
+    <Button fx:id="btnBack" layoutX="1112.0" layoutY="412.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="32.0" prefWidth="110.0" text="Back" />
+    <TableView fx:id="table" layoutX="35.0" layoutY="461.0" prefHeight="288.0" prefWidth="1187.0">
+      <columns>
+        <TableColumn fx:id="colId" prefWidth="48.5" text="Id" />
+        <TableColumn fx:id="colCompany" prefWidth="166.0" text="Company" />
+        <TableColumn fx:id="colType" prefWidth="125.0" text="Kind" />
+        <TableColumn fx:id="colPlateNo" prefWidth="117.0" text="PlateNo" />
+        <TableColumn fx:id="colModel" prefWidth="130.0" text="Model" />
+        <TableColumn fx:id="colAvailable" prefWidth="156.0" text="Status" />
+        <TableColumn fx:id="colVbn" prefWidth="114.0" text="Vbn" />
+        <TableColumn fx:id="colPrice" prefWidth="150.0" text="Price" />
+            <TableColumn fx:id="colColor" prefWidth="127.0" text="Color" />
+      </columns>
+    </TableView>
+    <Label layoutX="49.0" layoutY="299.0" text="Price" />
+    <TextField id="txtModel" fx:id="txtPrice" layoutX="160.0" layoutY="296.0" prefHeight="31.0" prefWidth="340.0" promptText="Enter Price" />
+      <ComboBox fx:id="cmbStatus" layoutX="158.0" layoutY="340.0" prefHeight="42.0" prefWidth="340.0" promptText="Select Status" />
+      <Label layoutX="44.0" layoutY="350.0" text="Status" />
+      <ComboBox fx:id="cmbColor" layoutX="545.0" layoutY="340.0" prefHeight="42.0" prefWidth="340.0" promptText="Select Color" />
+  </children>
+  <stylesheets>
+    <URL value="@style.css" />
+  </stylesheets>
+</AnchorPane>
